@@ -1,0 +1,2 @@
+#系统定制初期目标
+本项目通过修改android源码，检测并记录android系统内activity和task stack的变化情况，为用户行为分析提供数据。
