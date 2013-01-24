@@ -1,6 +1,8 @@
 #项目计划
+
 ##项目目标
 记录用户使用android系统时的操作行为。
+
 ##功能需求
 1.  在系统层面检测用户切换activity或者application的操作
 2.  记录系统当前所有Task Stack的情况
