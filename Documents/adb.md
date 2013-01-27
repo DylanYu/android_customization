@@ -13,7 +13,7 @@ Use the following command:
 
 We could get a lot of information,
 
-and only the part of TaskRecord and ProcessRecord are concerned.
+and the part of TaskRecord and ProcessRecord are concerned.
 
 Here's an example of TaskRecord:
 
