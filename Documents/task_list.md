@@ -5,35 +5,35 @@
 
 主要的类：
 
-* `ActivityManagerService`:
+* ActivityManagerService:
 
     * startActivity
     
-    (通过Binder驱动程序以参数START_ACTIVITY_TRANSACTION进入)
+    通过Binder驱动程序以参数START_ACTIVITY_TRANSACTION进入
     
     * activityPaused
     
-    (调用ActivityStack.activityPaused)
+    调用ActivityStack.activityPaused
     
     * startProcessLocked
     
-    (Process.start("android.app.ActivityThread",...))
+    Process.start("android.app.ActivityThread",...)
 
-* `ActivityStack`:
+* ActivityStack:
 
     * startActivityMayWait
     
-    (由ActivityManagerService成员mMainStack调用，会获得PackageName和ActivityName)
+    由ActivityManagerService成员mMainStack调用，会获得PackageName和ActivityName
     
     * startActivityLocked
     
     * startActivityUncheckedLocked
     
-    (考察LaunchMode, NotTop，确定是否需要new TaskRecord，新建的TaskRecord会保存到ActivityRecord的task属性里)
+    考察LaunchMode, NotTop，确定是否需要new TaskRecord，新建的TaskRecord会保存到ActivityRecord的task属性里
     
     * startActivityLocked
     
-    (这里会处理切换Task操作)
+    这里会处理切换Task操作
     
     * resumeTopActivity
     
@@ -51,16 +51,19 @@
     
     * startSpecificActivityLocked
 
-* `ActivityThread`:
+
+次要的类：
+
+* ActivityManagerProxy
+
+* ApplicationThreadProxy
+
+* ActivityThread:
 
     * handleMessage
 
     * handlePauseActivity
 
-次要的类：
-
-* `ActivityManagerProxy`
-* `ApplicationThreadProxy`
 
 ##研究处理流程
 1.  研究各模块之间的依赖、调用关系
