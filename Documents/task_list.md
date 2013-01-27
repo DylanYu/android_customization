@@ -9,35 +9,35 @@
 
     * startActivity
     
-    通过Binder驱动程序以参数START_ACTIVITY_TRANSACTION进入
+      通过Binder驱动程序以参数START_ACTIVITY_TRANSACTION进入
     
     * activityPaused
     
-    调用ActivityStack.activityPaused
+      调用ActivityStack.activityPaused
     
     * startProcessLocked
     
-    Process.start("android.app.ActivityThread",...)
+      Process.start("android.app.ActivityThread",...)
 
 * ActivityStack:
 
     * startActivityMayWait
     
-    由ActivityManagerService成员mMainStack调用，会获得PackageName和ActivityName
+      由ActivityManagerService成员mMainStack调用，会获得PackageName和ActivityName
     
     * startActivityLocked
     
     * startActivityUncheckedLocked
     
-    考察LaunchMode, NotTop，确定是否需要new TaskRecord，新建的TaskRecord会保存到ActivityRecord的task属性里
+      考察LaunchMode, NotTop，确定是否需要new TaskRecord，新建的TaskRecord会保存到ActivityRecord的task属性里
     
     * startActivityLocked
     
-    这里会处理切换Task操作
+      这里会处理切换Task操作
     
     * resumeTopActivity
     
-    把当前处于Resumed状态的Activity推入Paused状态(然后才可以启动新的Activity)
+      把当前处于Resumed状态的Activity推入Paused状态(然后才可以启动新的Activity)
     
     * startPausingLocked
     
@@ -47,7 +47,7 @@
     
     * resumeTopActivityLocked
     
-    准备启动目标Activity
+      准备启动目标Activity
     
     * startSpecificActivityLocked
 
